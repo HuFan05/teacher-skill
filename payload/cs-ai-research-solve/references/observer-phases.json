@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "catalog_version": "cs-ai-research-solve/v1",
+  "metric_contract": "timing/v1",
+  "script_phase_policy": "Only current research-asset entrypoints are listed. The optional host timing catalog does not prescribe collaborators, research methods, review roles, or publication authority. The separate external workflow session observes total task time without stopping research.",
+  "workflow_phases": [
+    "workflow.startup",
+    "retrieve",
+    "verify_live",
+    "plan_change",
+    "mutate",
+    "validate",
+    "version_control",
+    "final_response"
+  ],
+  "script_phases": [
+    "cs-ai-research-solve.script.crs",
+    "cs-ai-research-solve.script.crs_replay",
+    "cs-ai-research-solve.script.validate_terminology"
+  ],
+  "current_production_phase_labels": [
+    "cs-ai-research-solve.script.crs",
+    "cs-ai-research-solve.script.crs_replay",
+    "cs-ai-research-solve.script.validate_terminology"
+  ],
+  "frozen_compatibility_phase_labels": [],
+  "retired_historical_phase_labels": [],
+  "script_phase_authority": {
+    "cs-ai-research-solve.script.crs": "Current public asset CLI. Stored records and explicit reviews determine state; telemetry never grants research authority.",
+    "cs-ai-research-solve.script.crs_replay": "Bounded reproduction supervisor. Saves execution evidence and cleans owned workspaces; execution does not admit research review.",
+    "cs-ai-research-solve.script.validate_terminology": "Current terminology and documented CLI checks only; no judgment of research claims."
+  },
+  "allowed_fields": {
+    "mode": "name",
+    "operation": "name",
+    "write": "boolean",
+    "file_count": "nonnegative_integer",
+    "candidate_count": "nonnegative_integer",
+    "byte_count": "nonnegative_integer",
+    "harness_call_count": "nonnegative_integer",
+    "result_count": "nonnegative_integer",
+    "change_count": "nonnegative_integer",
+    "warning_count": "nonnegative_integer",
+    "error_count": "nonnegative_integer"
+  },
+  "forbidden_data": [
+    "path",
+    "title",
+    "note_title",
+    "query",
+    "body",
+    "excerpt",
+    "heading",
+    "diff",
+    "command",
+    "exception_text",
+    "resource_id",
+    "raw_file_hash",
+    "tool_output"
+  ]
+}

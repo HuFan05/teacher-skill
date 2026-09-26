@@ -1,0 +1,4 @@
+interface:
+  display_name: "Teacher"
+  short_description: "先弄清真正的问题，再查证、简短作答、保留有价值的研究资产"
+  default_prompt: "Use $teacher to find out what the requester actually needs before answering: frame the request, ask at most one closed choice only when the readings lead to different work and investigation cannot settle it, reuse the project's research assets and the requester's notes and papers first, investigate within bounds, and answer briefly with every point tied to checked evidence, its grade and what it cannot imply, declaring unknowns. Run frame-check and check-answer and deliver the rendered text."

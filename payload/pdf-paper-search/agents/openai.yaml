@@ -1,0 +1,4 @@
+interface:
+  display_name: "PDF Paper Search"
+  short_description: "Locate CS/AI algorithms, theorems, and results in local PDFs by paper, section, and page."
+  default_prompt: "Use $pdf-paper-search to locate this algorithm, theorem, equation, or result in my local PDF library and return the best paper, section, and page matches."

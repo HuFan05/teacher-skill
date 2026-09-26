@@ -1,0 +1,98 @@
+{
+  "schema_version": "skill-terminology-registry/v1",
+  "skill_id": "personal:obsidian-vault-notes",
+  "terms": [
+    {
+      "canonical_id": "bounded_retrieval",
+      "display_name_zh": "有界检索",
+      "definition_ref": "references/terminology.md#bounded_retrieval",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_canonical_concept",
+      "constitutive_fields": [
+        "query_scope",
+        "candidate_notes",
+        "selected_notes",
+        "expansion_rules",
+        "privacy_boundary"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "full-Vault loading"
+      ],
+      "introduced_in": "obsidian-vault-notes-v1.0.0",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "obsidian-vault-notes-v1.0.0: initial definition"
+      ]
+    },
+    {
+      "canonical_id": "guarded_edit_receipt",
+      "display_name_zh": "受保护编辑收据",
+      "definition_ref": "references/terminology.md#guarded_edit_receipt",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_canonical_concept",
+      "constitutive_fields": [
+        "path",
+        "pre_hash",
+        "operation",
+        "post_hash",
+        "validators",
+        "diff_check"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "Git commit",
+        "prose confirmation"
+      ],
+      "introduced_in": "obsidian-vault-notes-v1.0.0",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "obsidian-vault-notes-v1.0.0: initial definition"
+      ]
+    },
+    {
+      "canonical_id": "large_edit_verification_gate",
+      "display_name_zh": "大型编辑验证门禁",
+      "definition_ref": "references/terminology.md#large_edit_verification_gate",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_canonical_concept",
+      "constitutive_fields": [
+        "classification",
+        "trigger_evidence",
+        "gate_id",
+        "candidate_inventory_sha256",
+        "deterministic_checks",
+        "review_round",
+        "verifier_verdict",
+        "verdict_history",
+        "final_state",
+        "privacy_scope"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "ordinary post-write lint",
+        "guarded_edit_receipt",
+        "Git review"
+      ],
+      "introduced_in": "obsidian-vault-notes-v1.0.0",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [
+        {
+          "type": "distinct_from",
+          "target": "personal:obsidian-vault-notes#guarded_edit_receipt"
+        }
+      ],
+      "history": [
+        "obsidian-vault-notes-v1.0.0: initial definition"
+      ]
+    }
+  ]
+}

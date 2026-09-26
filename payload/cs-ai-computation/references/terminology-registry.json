@@ -1,0 +1,66 @@
+{
+  "schema_version": "skill-terminology-registry/v1",
+  "skill_id": "personal:cs-ai-computation",
+  "terms": [
+    {
+      "canonical_id": "computation_job",
+      "display_name_zh": "计算任务",
+      "definition_ref": "references/terminology.md#computation_job",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_canonical_concept",
+      "constitutive_fields": [
+        "job_id",
+        "inputs",
+        "precision_policy",
+        "backend",
+        "environment",
+        "seeds",
+        "code",
+        "config",
+        "resources",
+        "outputs",
+        "verification"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "one tool call",
+        "one training step"
+      ],
+      "introduced_in": "terminology-baseline/v1",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "terminology-baseline/v1: initial canonical definition"
+      ]
+    },
+    {
+      "canonical_id": "backend_snapshot",
+      "display_name_zh": "后端能力快照",
+      "definition_ref": "references/terminology.md#backend_snapshot",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_canonical_concept",
+      "constitutive_fields": [
+        "backend",
+        "executable",
+        "version",
+        "health",
+        "capabilities",
+        "refreshed_at"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "computation result"
+      ],
+      "introduced_in": "terminology-baseline/v1",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "terminology-baseline/v1: initial canonical definition"
+      ]
+    }
+  ]
+}

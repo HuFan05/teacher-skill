@@ -1,0 +1,4 @@
+interface:
+  display_name: "CS/AI Research Solve"
+  short_description: "Preserve, review, map, and exchange CS/AI research"
+  default_prompt: "Use $cs-ai-research-solve to continue this research from its evidence map, preserve useful results and failures, and distinguish reviewed history from usable conclusions."

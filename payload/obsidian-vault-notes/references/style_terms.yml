@@ -1,0 +1,14 @@
+# Default review prompts for lint_note_article_revision.py; --style-terms can replace this file.
+# These are review prompts, not automatic proof that the prose is wrong.
+
+suspicious_terms:
+  - 赋能
+  - 飞轮效应
+  - 抓手
+
+allowed_terms:
+  - FTS5
+  - wikilink
+  - frontmatter
+  - block anchor
+  - Git

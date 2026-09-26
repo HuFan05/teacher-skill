@@ -1,0 +1,525 @@
+{
+  "schema_version": "skill-version-coupling-manifest/v1",
+  "skill_name": "obsidian-vault-notes",
+  "current_generation": "obsidian-vault-notes-v1.0.0",
+  "historical_generations": [],
+  "generation_tokens": [
+    {
+      "token": "note-operation-audit/v1",
+      "generation": "current"
+    },
+    {
+      "token": "obsidian-large-edit-candidate-inventory/v1",
+      "generation": "current"
+    },
+    {
+      "token": "obsidian-large-edit-classification/v1",
+      "generation": "current"
+    },
+    {
+      "token": "obsidian-large-edit-deterministic-receipt/v1",
+      "generation": "current"
+    },
+    {
+      "token": "obsidian-large-edit-gate-state/v1",
+      "generation": "current"
+    },
+    {
+      "token": "obsidian-large-edit-verifier-receipt/v1",
+      "generation": "current"
+    },
+    {
+      "token": "obsidian-recall-markdown/v1",
+      "generation": "current"
+    },
+    {
+      "token": "obsidian-vault-notes/v1",
+      "generation": "current"
+    },
+    {
+      "token": "skill-terminology-registry/v1",
+      "generation": "current"
+    },
+    {
+      "token": "skill-version-coupling-manifest/v1",
+      "generation": "current"
+    },
+    {
+      "token": "timing/v1",
+      "generation": "current"
+    }
+  ],
+  "entrypoints": [
+    {
+      "id": "instruction",
+      "path": "SKILL.md",
+      "generation": "obsidian-vault-notes-v1.0.0",
+      "kind": "instruction",
+      "source": "current"
+    },
+    {
+      "id": "vault-edit",
+      "path": "scripts/vault_edit.py",
+      "generation": "obsidian-vault-notes-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "vault-stats",
+      "path": "scripts/vault_stats.py",
+      "generation": "obsidian-vault-notes-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "vault-impact",
+      "path": "scripts/vault_impact.py",
+      "generation": "obsidian-vault-notes-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "vault-batch-edit",
+      "path": "scripts/vault_batch_edit.py",
+      "generation": "obsidian-vault-notes-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "vault-file-bundle",
+      "path": "scripts/vault_file_bundle.py",
+      "generation": "obsidian-vault-notes-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "validate-obsidian-formulas",
+      "path": "scripts/validate_obsidian_formulas.py",
+      "generation": "obsidian-vault-notes-v1.0.0",
+      "kind": "validator",
+      "source": "current"
+    },
+    {
+      "id": "validate-obsidian-links",
+      "path": "scripts/validate_obsidian_links.py",
+      "generation": "obsidian-vault-notes-v1.0.0",
+      "kind": "validator",
+      "source": "current"
+    },
+    {
+      "id": "extract-recall-markdown",
+      "path": "scripts/extract_recall_markdown.py",
+      "generation": "obsidian-vault-notes-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "note-public-output",
+      "path": "scripts/note_public_output.py",
+      "generation": "obsidian-vault-notes-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "editor-schema",
+      "path": "scripts/vault_edit.py",
+      "generation": "obsidian-vault-notes-v1.0.0",
+      "kind": "schema",
+      "source": "current"
+    }
+  ],
+  "components": [
+    {
+      "path": "SKILL.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "agents/openai.yaml",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/ai-style-rewrite.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/article-revision-style.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/author-voice-profile.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/cross-note-maintenance.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/cs-ai-note-style.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/editing-protocol.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/git-workflow.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/image-embed-repair.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/large-edit-verification.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/local-workflow.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/media-insertion.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/natural-chinese-lint.json",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/observer-data-dictionary.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/observer-phases.json",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/permissions.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/privacy.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/resource-references.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/retrieval-protocol.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/skill-maintenance.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/source-citation-style.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/style_terms.yml",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/task-scope.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/terminology-registry.json",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/terminology.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/vault-file-bundles.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "references/version-coupling-manifest.json",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/_common.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/_observer.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/check_computation_handoff.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/extract_recall_markdown.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/large_edit_review.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/lint_note_article_revision.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/note_public_output.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/observer_run.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/obsidian_local_kb/__init__.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/obsidian_local_kb/__main__.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/obsidian_local_kb/cli.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/obsidian_local_kb/db.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/obsidian_local_kb/markdown.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/obsidian_local_kb/pdf_db.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/obsidian_local_kb/pdf_extract.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/obsidian_local_kb/pdf_library_survey.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/obsidian_local_kb/pdf_survey.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/obsidian_local_kb/util.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/tests/test_refresh_ranking_markdown.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/obsidian_local_kb/tests/test_status_and_recall.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/recall_notes.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/resource_reference_guard.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/setup_local.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/validate_obsidian_formulas.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/validate_obsidian_links.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/validate_terminology.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/vault_batch_edit.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/vault_edit.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/vault_file_bundle.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/vault_git_audit.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/vault_impact.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "scripts/vault_stats.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/fixtures/style_rewrite/algorithm.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/fixtures/style_rewrite/explanatory.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/fixtures/style_rewrite/reflective.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/fixtures/style_rewrite/source-commentary.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/fixtures/style_rewrite/technical.md",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_cross_note_tools.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_extract_recall_markdown.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_large_edit_review.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_local_setup_and_config.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_manage_harness_integration.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_observer_contract.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_recall_and_stats.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_resource_move_batch.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_resource_reference_guard.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_validate_obsidian_formulas.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_validate_obsidian_links.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_vault_edit_and_lint.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    },
+    {
+      "path": "tests/test_vault_file_bundle.py",
+      "classification": "initial",
+      "rationale": "Component of the initial generation."
+    }
+  ],
+  "edges": [],
+  "changed_boundary_classes": []
+}

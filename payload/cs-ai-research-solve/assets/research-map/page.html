@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="crs-template" content="$template_id"><meta name="crs-snapshot" content="$snapshot">
+<title>$title · $project_title</title><link rel="stylesheet" href="style.css">
+$formula_script<script defer src="app.js"></script></head>
+<body data-page="$page_id" data-default-language="$default_language">
+<a class="skip" href="#content">跳至正文</a>
+<aside><a class="brand" href="index.html">λ <span>研究地图</span></a>
+<p class="sidebar-note">$project_title</p>
+<label for="search">搜索研究记录与正文</label><input id="search" type="search" placeholder="输入关键词" autocomplete="off">
+<div id="search-status" role="status"></div><div id="results"></div>
+<button class="nav-toggle" type="button" aria-controls="project-nav" aria-expanded="false">栏目导航</button><nav id="project-nav" aria-label="研究地图导航">$navigation</nav>
+<div class="sidebar-foot">本地阅读版 · 离线可读<br>来源与研究状态随页保留</div></aside>
+<main><header><a href="index.html">研究首页</a><span>本地快照 · 离线可读</span><button type="button" id="print">打印</button></header>
+<div class="eyebrow">CS/AI 研究档案 / LOCAL EDITION</div><h1 class="hero">$title_html</h1>
+<p class="lede">$subtitle</p>
+$language_controls
+<article id="content" tabindex="-1">$body</article>
+<script type="application/json" id="language-content">$bodies</script>
+<details class="backlinks"><summary>来源与版本</summary><p>$status</p><p class="snapshot">$snapshot</p></details>
+<footer>网页是研究记录的阅读视图，不改变原始证据或审核状态。</footer></main></body></html>

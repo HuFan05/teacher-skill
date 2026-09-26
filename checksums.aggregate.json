@@ -1,0 +1,6 @@
+{
+  "aggregate_source_sha256": "5483d17458adb50b64aded465290fbafefcd48e2ffff291d7f970d5dc76a54a5",
+  "algorithm": "sha256 of sorted relative_path NUL file_sha256 LF records",
+  "file_count": 329,
+  "schema_version": 1
+}

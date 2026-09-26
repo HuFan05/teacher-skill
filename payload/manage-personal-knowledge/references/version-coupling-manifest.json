@@ -1,0 +1,473 @@
+{
+  "schema_version": "skill-version-coupling-manifest/v1",
+  "skill_name": "manage-personal-knowledge",
+  "current_generation": "manage-personal-knowledge-v1.0.0",
+  "historical_generations": [],
+  "generation_tokens": [
+    {
+      "token": "ascii-paper-anchor/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "manage-personal-knowledge/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "mpk-question-collections/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "mpk-question-federation/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "mpk-question-import-plan/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "mpk-questions/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "mpk-search/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "numbered-heading-parser/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "numbered-markdown/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "paper-canonical/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "paper-locate/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "pdf-paper-search/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "question-federation/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "skill-terminology-registry/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "skill-version-coupling-manifest/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "timing/v1",
+      "generation": "shared"
+    }
+  ],
+  "entrypoints": [
+    {
+      "id": "entry-0",
+      "path": "SKILL.md",
+      "kind": "instruction",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-1",
+      "path": "SKILL.md",
+      "kind": "compatibility",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-2",
+      "path": "scripts/benchmark_search.py",
+      "kind": "runner",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-3",
+      "path": "scripts/manage_kb.py",
+      "kind": "runner",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-4",
+      "path": "scripts/observer_run.py",
+      "kind": "runner",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-5",
+      "path": "scripts/setup_local.py",
+      "kind": "runner",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-6",
+      "path": "scripts/suite_doctor.py",
+      "kind": "validator",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-7",
+      "path": "scripts/validate_terminology.py",
+      "kind": "validator",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-8",
+      "path": "scripts/manage_kb.py",
+      "kind": "dispatcher",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-9",
+      "path": "scripts/manage_kb.py",
+      "kind": "schema",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-10",
+      "path": "scripts/setup_local.py",
+      "kind": "compatibility",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-11",
+      "path": "scripts/manage_personal_knowledge/config.py",
+      "kind": "schema",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-12",
+      "path": "scripts/manage_personal_knowledge/registry.py",
+      "kind": "schema",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-13",
+      "path": "scripts/manage_personal_knowledge/questions.py",
+      "kind": "schema",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-14",
+      "path": "scripts/manage_personal_knowledge/question_collections.py",
+      "kind": "schema",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-15",
+      "path": "scripts/manage_personal_knowledge/operations.py",
+      "kind": "schema",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-16",
+      "path": "scripts/manage_personal_knowledge/references.py",
+      "kind": "schema",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-17",
+      "path": "scripts/manage_personal_knowledge/library.py",
+      "kind": "schema",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-18",
+      "path": "scripts/manage_personal_knowledge/config.py",
+      "kind": "migration",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    },
+    {
+      "id": "entry-19",
+      "path": "scripts/manage_personal_knowledge/operations.py",
+      "kind": "migration",
+      "source": "current",
+      "generation": "manage-personal-knowledge-v1.0.0"
+    }
+  ],
+  "components": [
+    {
+      "path": "SKILL.md",
+      "classification": "initial",
+      "rationale": "Skill instructions, routing, hard boundaries, and bounded-output rules."
+    },
+    {
+      "path": "agents/openai.yaml",
+      "classification": "initial",
+      "rationale": "Agent interface metadata and default prompt."
+    },
+    {
+      "path": "references/configuration.md",
+      "classification": "initial",
+      "rationale": "Configuration schema, state locations, discovery, and missing-path states."
+    },
+    {
+      "path": "references/observer-data-dictionary.md",
+      "classification": "initial",
+      "rationale": "Observer phase catalog and allowed telemetry fields."
+    },
+    {
+      "path": "references/observer-phases.json",
+      "classification": "initial",
+      "rationale": "Machine-readable observer phase catalog."
+    },
+    {
+      "path": "references/paper-anchor-contract-v1.json",
+      "classification": "initial",
+      "rationale": "Shared ASCII anchor vectors between the paper-location query canonicalizer and the PDF-index formatter."
+    },
+    {
+      "path": "references/paper-locate-v1-fixture.json",
+      "classification": "initial",
+      "rationale": "Shared raw paper-locate/v1 package fixture for the managed adapter."
+    },
+    {
+      "path": "references/pdf-library.md",
+      "classification": "initial",
+      "rationale": "PDF index, search, paper-location handoff, and OCR boundary contract."
+    },
+    {
+      "path": "references/performance-benchmark.md",
+      "classification": "initial",
+      "rationale": "Local script and host-agent latency benchmark procedure."
+    },
+    {
+      "path": "references/question-database.md",
+      "classification": "initial",
+      "rationale": "Federated CS/AI question collection import, status, and search contract."
+    },
+    {
+      "path": "references/resource-registry.md",
+      "classification": "initial",
+      "rationale": "Stable KB resource identity, storage, mutation, and note-reference contract."
+    },
+    {
+      "path": "references/search-evaluation-contract.md",
+      "classification": "initial",
+      "rationale": "Domain contract for an optional, user-run search evaluation."
+    },
+    {
+      "path": "references/terminology-registry.json",
+      "classification": "initial",
+      "rationale": "Machine-readable canonical terminology registry."
+    },
+    {
+      "path": "references/terminology.md",
+      "classification": "initial",
+      "rationale": "Normative canonical term definitions."
+    },
+    {
+      "path": "references/version-coupling-manifest.json",
+      "classification": "initial",
+      "rationale": "Version-coupling manifest for this Skill's entry points and components."
+    },
+    {
+      "path": "references/writeback-handoff.md",
+      "classification": "initial",
+      "rationale": "Controlled write-back handoff package for obsidian-vault-notes."
+    },
+    {
+      "path": "scripts/benchmark_search.py",
+      "classification": "initial",
+      "rationale": "Latency benchmark command-line entry."
+    },
+    {
+      "path": "scripts/manage_kb.py",
+      "classification": "initial",
+      "rationale": "Main knowledge-root command-line dispatcher."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/__init__.py",
+      "classification": "initial",
+      "rationale": "Package marker for the bundled library."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/config.py",
+      "classification": "initial",
+      "rationale": "Configuration schema, platform locations, and guarded configuration writes."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/discovery.py",
+      "classification": "initial",
+      "rationale": "Bounded Vault and PDF-library candidate discovery."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/integrations.py",
+      "classification": "initial",
+      "rationale": "Bounded subprocess adapters for obsidian-vault-notes and pdf-paper-search."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/library.py",
+      "classification": "initial",
+      "rationale": "Incremental PDF text index and lexical search."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/ocr.py",
+      "classification": "initial",
+      "rationale": "OCR toolchain preflight and one-PDF OCR."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/operations.py",
+      "classification": "initial",
+      "rationale": "Transactional resource move and whole-root relink operations."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/performance.py",
+      "classification": "initial",
+      "rationale": "Local script and host-agent benchmark runners."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/question_collections.py",
+      "classification": "initial",
+      "rationale": "Knowledge-root question collection discovery, import plans, and search."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/questions.py",
+      "classification": "initial",
+      "rationale": "Vault question index, guarded import, and search."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/references.py",
+      "classification": "initial",
+      "rationale": "Note resource-reference parsing and cache."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/registry.py",
+      "classification": "initial",
+      "rationale": "Resource registry storage, scanning, hashing, and recovery manifest."
+    },
+    {
+      "path": "scripts/manage_personal_knowledge/text.py",
+      "classification": "initial",
+      "rationale": "PDF text extraction and versioned lexical normalization."
+    },
+    {
+      "path": "scripts/mpk_public_output.py",
+      "classification": "initial",
+      "rationale": "Bounded public JSON response transport for owned entries."
+    },
+    {
+      "path": "scripts/mpk_views.py",
+      "classification": "initial",
+      "rationale": "Closed public views of owned command results."
+    },
+    {
+      "path": "scripts/observer_run.py",
+      "classification": "initial",
+      "rationale": "Fail-open observer wrapper for production entries."
+    },
+    {
+      "path": "scripts/setup_local.py",
+      "classification": "initial",
+      "rationale": "First-run setup, check, repair, relink, and forget entry."
+    },
+    {
+      "path": "scripts/suite_doctor.py",
+      "classification": "initial",
+      "rationale": "Read-only Teacher suite capability report."
+    },
+    {
+      "path": "scripts/validate_terminology.py",
+      "classification": "initial",
+      "rationale": "Canonical terminology validator."
+    },
+    {
+      "path": "tests/test_cli.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for cli."
+    },
+    {
+      "path": "tests/test_config_discovery.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for config discovery."
+    },
+    {
+      "path": "tests/test_integrations_ocr.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for integrations ocr."
+    },
+    {
+      "path": "tests/test_library.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for library."
+    },
+    {
+      "path": "tests/test_observer_run.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for observer run."
+    },
+    {
+      "path": "tests/test_operations.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for operations."
+    },
+    {
+      "path": "tests/test_performance.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for performance."
+    },
+    {
+      "path": "tests/test_questions.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for questions."
+    },
+    {
+      "path": "tests/test_references.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for references."
+    },
+    {
+      "path": "tests/test_registry.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for registry."
+    },
+    {
+      "path": "tests/test_registry_cli.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for registry cli."
+    },
+    {
+      "path": "tests/test_search_evaluation_contract.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for search evaluation contract."
+    },
+    {
+      "path": "tests/test_setup_local.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for setup local."
+    },
+    {
+      "path": "tests/test_writeback_handoff.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests for writeback handoff."
+    }
+  ],
+  "edges": [],
+  "changed_boundary_classes": []
+}

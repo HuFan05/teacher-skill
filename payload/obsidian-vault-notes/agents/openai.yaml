@@ -1,0 +1,7 @@
+interface:
+  display_name: "Obsidian Vault Notes"
+  short_description: "Read, guard, and rewrite Vault prose in the author's voice."
+  default_prompt: "Use $obsidian-vault-notes for bounded local retrieval and guarded Vault edits. When I explicitly authorize a note edit and the Vault is outside the current writable roots, request narrow sandbox escalation for the exact hash-protected write instead of claiming that writing is impossible; approve-for-me or automatic review acts only after that request is issued. When I explicitly ask to 去除AI味 or naturalize prose, 自动改写 the style scope I actually name, preserve semantic invariants, calibrate from reliable local prose and any saved author profile, reject corpus residue that is not genuine voice, run a second cold read, and write back through the guarded edit flow."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,70 @@
+{
+  "schema_version": "paper-locate/v1",
+  "canonicalizer_version": "paper-canonical/v1",
+  "route": "explicit-index",
+  "status": "verified_hit",
+  "query": {
+    "query_type": "theorem_lookup",
+    "hard_concepts": ["lower_bound", "worst_case"],
+    "signature_terms": ["theorem", "lower", "bound", "comparison", "sorting", "worst", "case"]
+  },
+  "search": {
+    "alias_mode": "core",
+    "expanded": false,
+    "candidate_count": 3,
+    "candidate_pdf_count": 3,
+    "verified_page_count": 2,
+    "adjacent_page_count": 1,
+    "stop_reason": "verified_core_hit"
+  },
+  "results": [
+    {
+      "title": "Sorting Lower Bounds",
+      "path": "Shelf/sorting-notes.pdf",
+      "pdf_page": 42,
+      "printed_page": null,
+      "match_type": "exact hit",
+      "confidence": "high",
+      "verified": true,
+      "origin": "adjacent",
+      "seed_page": 41,
+      "adjacent_offset": 1,
+      "statement_window": "Theorem 3. Every comparison-based sorting algorithm needs Omega(n log n) comparisons in the worst case ...",
+      "why": ["local labeled theorem statement", "all hard concepts occur locally"],
+      "extraction": {
+        "status": "indexed",
+        "method": "pdftotext",
+        "warning": null
+      },
+      "features": {
+        "page_role": "theorem",
+        "local_statement": true,
+        "direct_statement": true,
+        "hard_concepts_required": ["lower_bound", "worst_case"],
+        "hard_concepts_found": ["lower_bound", "worst_case"],
+        "hard_concepts_missing": []
+      },
+      "rank": 1
+    }
+  ],
+  "coverage": {
+    "document_status_counts": {
+      "indexed": 120,
+      "no_text": 2,
+      "error": 1
+    },
+    "incomplete": true,
+    "diagnostics_summary": {
+      "errors": 0,
+      "warnings": 0,
+      "info": 0
+    },
+    "warnings": []
+  },
+  "timing_ms": {
+    "core": 124.375,
+    "expanded": 0.0,
+    "verify": 8.625,
+    "total": 133.5
+  }
+}

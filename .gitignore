@@ -1,0 +1,7 @@
+# Local agent workspace and caches; never shipped.
+.workbuddy/
+work/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.DS_Store

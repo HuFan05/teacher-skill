@@ -1,0 +1,300 @@
+{
+  "schema_version": "skill-version-coupling-manifest/v1",
+  "skill_name": "pdf-paper-search",
+  "current_generation": "pdf-paper-search-v1.0.0",
+  "historical_generations": [],
+  "generation_tokens": [
+    {
+      "token": "ascii-paper-anchor/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "paper-canonical/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "paper-locate/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "pdf-paper-search/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "skill-terminology-registry/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "skill-version-coupling-manifest/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "terminology-baseline/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "timing/v1",
+      "generation": "shared"
+    }
+  ],
+  "entrypoints": [
+    {
+      "id": "entry-0",
+      "path": "SKILL.md",
+      "generation": "pdf-paper-search-v1.0.0",
+      "kind": "instruction",
+      "source": "current"
+    },
+    {
+      "id": "entry-1",
+      "path": "scripts/paper_locate.py",
+      "generation": "pdf-paper-search-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "entry-2",
+      "path": "scripts/paper_locate.py",
+      "generation": "pdf-paper-search-v1.0.0",
+      "kind": "schema",
+      "source": "current"
+    },
+    {
+      "id": "entry-3",
+      "path": "scripts/paper_search.py",
+      "generation": "pdf-paper-search-v1.0.0",
+      "kind": "compatibility",
+      "source": "current"
+    },
+    {
+      "id": "entry-4",
+      "path": "scripts/direct_pdf_search.py",
+      "generation": "pdf-paper-search-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "entry-5",
+      "path": "scripts/pdf_paper_search/public_output.py",
+      "generation": "pdf-paper-search-v1.0.0",
+      "kind": "validator",
+      "source": "current"
+    },
+    {
+      "id": "entry-6",
+      "path": "scripts/validate_terminology.py",
+      "generation": "pdf-paper-search-v1.0.0",
+      "kind": "validator",
+      "source": "current"
+    }
+  ],
+  "components": [
+    {
+      "path": "SKILL.md",
+      "classification": "initial",
+      "rationale": "Skill instructions, workflow invariants, verification rules, and public retrieval boundaries."
+    },
+    {
+      "path": "agents/openai.yaml",
+      "classification": "initial",
+      "rationale": "Agent interface metadata and default prompt."
+    },
+    {
+      "path": "references/direct-pdf-operations.md",
+      "classification": "initial",
+      "rationale": "Direct-PDF fallback operations and extraction recovery."
+    },
+    {
+      "path": "references/improvement-strategy.md",
+      "classification": "initial",
+      "rationale": "Failure-layer diagnosis and reusable-fix strategy."
+    },
+    {
+      "path": "references/indexed-search-operations.md",
+      "classification": "initial",
+      "rationale": "Indexed search and answer-ready locate operations."
+    },
+    {
+      "path": "references/observer-data-dictionary.md",
+      "classification": "initial",
+      "rationale": "Observer phase and field dictionary."
+    },
+    {
+      "path": "references/observer-phases.json",
+      "classification": "initial",
+      "rationale": "Machine-readable observer phase catalog."
+    },
+    {
+      "path": "references/paper-anchor-contract-v1.json",
+      "classification": "initial",
+      "rationale": "Shared ASCII anchor vectors between the query canonicalizer and the PDF-index formatter."
+    },
+    {
+      "path": "references/paper-locate-v1-fixture.json",
+      "classification": "initial",
+      "rationale": "Shared raw paper-locate/v1 package fixture."
+    },
+    {
+      "path": "references/query-normalization.md",
+      "classification": "initial",
+      "rationale": "Query normalization, hard-concept, alias, and structural-anchor rules."
+    },
+    {
+      "path": "references/regression-operations.md",
+      "classification": "initial",
+      "rationale": "External regression workflow and failure buckets."
+    },
+    {
+      "path": "references/terminology-registry.json",
+      "classification": "initial",
+      "rationale": "Machine-readable canonical terminology registry."
+    },
+    {
+      "path": "references/terminology.md",
+      "classification": "initial",
+      "rationale": "Normative canonical term definitions."
+    },
+    {
+      "path": "references/version-coupling-manifest.json",
+      "classification": "initial",
+      "rationale": "Version coupling of Skill components."
+    },
+    {
+      "path": "scripts/case_schema.py",
+      "classification": "initial",
+      "rationale": "External regression case schema and path boundary."
+    },
+    {
+      "path": "scripts/check_duplicate_defs.py",
+      "classification": "initial",
+      "rationale": "Duplicate top-level definition checker."
+    },
+    {
+      "path": "scripts/direct_pdf_search.py",
+      "classification": "initial",
+      "rationale": "Direct-PDF fallback public entry."
+    },
+    {
+      "path": "scripts/doctor_paper_search.py",
+      "classification": "initial",
+      "rationale": "Environment and regression-shelf diagnostics."
+    },
+    {
+      "path": "scripts/evaluate_paper_search.py",
+      "classification": "initial",
+      "rationale": "External regression evaluation runner."
+    },
+    {
+      "path": "scripts/observer_run.py",
+      "classification": "initial",
+      "rationale": "Fail-open observer wrapper for production entries."
+    },
+    {
+      "path": "scripts/paper_locate.py",
+      "classification": "initial",
+      "rationale": "Answer-ready explicit-index locate public entry."
+    },
+    {
+      "path": "scripts/paper_search.py",
+      "classification": "initial",
+      "rationale": "Indexed multi-alias search and page-feature reranker public entry."
+    },
+    {
+      "path": "scripts/pdf_paper_search/__init__.py",
+      "classification": "initial",
+      "rationale": "Package exports."
+    },
+    {
+      "path": "scripts/pdf_paper_search/aliases.py",
+      "classification": "initial",
+      "rationale": "Hard concepts, structure cues, and alias construction."
+    },
+    {
+      "path": "scripts/pdf_paper_search/diagnostics.py",
+      "classification": "initial",
+      "rationale": "Diagnostic recording and failure buckets."
+    },
+    {
+      "path": "scripts/pdf_paper_search/features.py",
+      "classification": "initial",
+      "rationale": "Page evidence and concept coverage."
+    },
+    {
+      "path": "scripts/pdf_paper_search/locator.py",
+      "classification": "initial",
+      "rationale": "Bounded locate, adjacent-page verification, and wire package."
+    },
+    {
+      "path": "scripts/pdf_paper_search/normalization.py",
+      "classification": "initial",
+      "rationale": "Versioned query canonicalizer and structural anchor fingerprints."
+    },
+    {
+      "path": "scripts/pdf_paper_search/page_roles.py",
+      "classification": "initial",
+      "rationale": "Page-role vocabulary and role sets per query type."
+    },
+    {
+      "path": "scripts/pdf_paper_search/paths.py",
+      "classification": "initial",
+      "rationale": "Explicit and sibling-skill path resolution and SQLite validation."
+    },
+    {
+      "path": "scripts/pdf_paper_search/public_output.py",
+      "classification": "initial",
+      "rationale": "Bounded public-main output guard."
+    },
+    {
+      "path": "scripts/pdf_paper_search/query_spec.py",
+      "classification": "initial",
+      "rationale": "Shared QuerySpec and query-type detection."
+    },
+    {
+      "path": "scripts/pdf_paper_search/scorer.py",
+      "classification": "initial",
+      "rationale": "Score breakdown helper."
+    },
+    {
+      "path": "scripts/pdf_paper_search/types.py",
+      "classification": "initial",
+      "rationale": "Diagnostic, feature, and page-evidence types."
+    },
+    {
+      "path": "scripts/register_feedback_case.py",
+      "classification": "initial",
+      "rationale": "External feedback-case registration entry."
+    },
+    {
+      "path": "scripts/sample_paper_search_cases.py",
+      "classification": "initial",
+      "rationale": "Draft case sampler for explicit shelves."
+    },
+    {
+      "path": "scripts/test_external_benchmark_boundary.py",
+      "classification": "initial",
+      "rationale": "Synthetic tests for the external benchmark boundary."
+    },
+    {
+      "path": "scripts/test_paper_locate.py",
+      "classification": "initial",
+      "rationale": "Synthetic tests for canonicalization, page verification, and locate."
+    },
+    {
+      "path": "scripts/test_portable_paths.py",
+      "classification": "initial",
+      "rationale": "Synthetic tests for portable extractor discovery."
+    },
+    {
+      "path": "scripts/test_query_spec_parity.py",
+      "classification": "initial",
+      "rationale": "Synthetic QuerySpec parity cases."
+    },
+    {
+      "path": "scripts/validate_terminology.py",
+      "classification": "initial",
+      "rationale": "Canonical terminology validator."
+    }
+  ],
+  "edges": [],
+  "changed_boundary_classes": []
+}

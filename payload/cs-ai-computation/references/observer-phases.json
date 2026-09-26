@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "catalog_version": "cs-ai-computation/v1",
+  "metric_contract": "timing/v1",
+  "workflow_phases": [
+    "workflow.startup",
+    "retrieve",
+    "verify_live",
+    "plan_change",
+    "mutate",
+    "validate",
+    "version_control",
+    "final_response"
+  ],
+  "script_phases": [
+    "cs-ai-computation.script.run",
+    "cs-ai-computation.script.backend_inventory",
+    "cs-ai-computation.script.check_mcp_policy",
+    "cs-ai-computation.script.computation_record",
+    "cs-ai-computation.script.probe_backends"
+  ],
+  "allowed_fields": {
+    "mode": "name",
+    "operation": "name",
+    "write": "boolean",
+    "file_count": "nonnegative_integer",
+    "candidate_count": "nonnegative_integer",
+    "byte_count": "nonnegative_integer",
+    "harness_call_count": "nonnegative_integer",
+    "result_count": "nonnegative_integer",
+    "change_count": "nonnegative_integer",
+    "warning_count": "nonnegative_integer",
+    "error_count": "nonnegative_integer"
+  },
+  "forbidden_data": [
+    "path",
+    "title",
+    "note_title",
+    "query",
+    "body",
+    "excerpt",
+    "heading",
+    "diff",
+    "command",
+    "exception_text",
+    "resource_id",
+    "raw_file_hash",
+    "tool_output"
+  ]
+}

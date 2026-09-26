@@ -1,0 +1,1 @@
+Read `AGENT_INSTALL.md` and `package-manifest.json`, inspect the receiving environment with read-only commands, and install all six Skills as one transaction. Ask before replacement, downloads, privilege changes, system configuration, real-corpus indexing, or destructive cleanup. Report validation results and unverified limits.

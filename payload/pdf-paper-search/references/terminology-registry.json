@@ -1,0 +1,59 @@
+{
+  "schema_version": "skill-terminology-registry/v1",
+  "skill_id": "personal:pdf-paper-search",
+  "terms": [
+    {
+      "canonical_id": "pdf_shelf",
+      "display_name_zh": "PDF 书架",
+      "definition_ref": "references/terminology.md#pdf_shelf",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_canonical_concept",
+      "constitutive_fields": [
+        "shelf_id",
+        "pdfs",
+        "index",
+        "coverage",
+        "freshness",
+        "backend"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "one PDF file"
+      ],
+      "introduced_in": "terminology-baseline/v1",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "terminology-baseline/v1: initial canonical definition"
+      ]
+    },
+    {
+      "canonical_id": "page_verification",
+      "display_name_zh": "页面核验",
+      "definition_ref": "references/terminology.md#page_verification",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_canonical_concept",
+      "constitutive_fields": [
+        "pdf_identity",
+        "page",
+        "evidence",
+        "match",
+        "status"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "database ranking result"
+      ],
+      "introduced_in": "terminology-baseline/v1",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "terminology-baseline/v1: initial canonical definition"
+      ]
+    }
+  ]
+}

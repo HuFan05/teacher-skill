@@ -1,0 +1,4 @@
+interface:
+  display_name: "Manage Personal Knowledge"
+  short_description: "Search questions, notes, PDFs, and managed local resources"
+  default_prompt: "Use $manage-personal-knowledge to search my structured question index first for broad problem searches, then use coverage-aware Vault/PDF fallback unless I explicitly name a range; also manage stable KB resources safely."

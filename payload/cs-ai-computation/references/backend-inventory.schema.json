@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local.teacher.invalid/cs-ai-computation/backend-inventory.schema.json",
+  "title": "CS/AI computation local backend inventory",
+  "type": "object",
+  "required": [
+    "inventory_schema_version",
+    "created_at_utc",
+    "updated_at_utc",
+    "local",
+    "mcp",
+    "invalidations"
+  ],
+  "$defs": {
+    "tool": {
+      "type": "object",
+      "required": ["status", "path"],
+      "properties": {
+        "status": { "enum": ["available", "unavailable", "probe_failed"] },
+        "requested_command": { "type": "string" },
+        "discovery_source": { "enum": ["explicit", "path", "elan_default_toolchain"] },
+        "path": { "type": ["string", "null"] },
+        "version": { "type": ["string", "null"] },
+        "version_output": { "type": "string" },
+        "exit_code": { "type": ["integer", "null"] },
+        "error": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "tool_group": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/tool" }
+    }
+  },
+  "properties": {
+    "inventory_schema_version": { "const": "1.0" },
+    "created_at_utc": { "type": "string", "format": "date-time" },
+    "updated_at_utc": { "type": "string", "format": "date-time" },
+    "local": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "probed_at_utc",
+        "host",
+        "hardware",
+        "python",
+        "accelerators",
+        "smt_solvers",
+        "proof_assistants",
+        "model_checkers",
+        "profilers"
+      ],
+      "properties": {
+        "schema_version": { "const": "1.0" },
+        "probed_at_utc": { "type": "string", "format": "date-time" },
+        "host": {
+          "type": "object",
+          "required": ["system", "architecture"],
+          "properties": {
+            "system": { "enum": ["Windows", "Darwin", "Linux"] },
+            "architecture": { "type": "string", "minLength": 1 }
+          },
+          "additionalProperties": true
+        },
+        "hardware": {
+          "type": "object",
+          "properties": {
+            "logical_cpus": { "type": ["integer", "null"] },
+            "memory_bytes": { "type": ["integer", "null"] },
+            "cpu_model": { "type": ["string", "null"] }
+          },
+          "additionalProperties": true
+        },
+        "python": {
+          "type": "object",
+          "required": ["status", "path", "libraries"],
+          "properties": {
+            "status": { "enum": ["available", "unavailable", "probe_failed"] },
+            "path": { "type": ["string", "null"] },
+            "version": { "type": "string" },
+            "libraries": { "type": "object" },
+            "wsl": { "type": "object" }
+          },
+          "additionalProperties": true
+        },
+        "accelerators": {
+          "type": "object",
+          "required": ["nvidia_smi", "frameworks"],
+          "properties": {
+            "nvidia_smi": { "$ref": "#/$defs/tool" },
+            "frameworks": { "type": "object" },
+            "apple_silicon": { "type": "boolean" }
+          },
+          "additionalProperties": true
+        },
+        "smt_solvers": { "$ref": "#/$defs/tool_group" },
+        "proof_assistants": { "$ref": "#/$defs/tool_group" },
+        "model_checkers": { "$ref": "#/$defs/tool_group" },
+        "profilers": { "$ref": "#/$defs/tool_group" }
+      },
+      "additionalProperties": true
+    },
+    "mcp": {
+      "type": "object",
+      "required": ["authority", "persisted_status", "required_action"],
+      "properties": {
+        "authority": { "const": "current_session_tool_discovery_and_call" },
+        "persisted_status": { "const": "historical_only" },
+        "required_action": { "type": "string" },
+        "observations": {
+          "type": "object",
+          "maxProperties": 16,
+          "additionalProperties": {
+            "type": "object",
+            "required": ["server_name", "protocol_version", "server_version", "runtime_version", "observed_at_utc", "evidence"],
+            "properties": {
+              "server_name": { "type": "string", "minLength": 1 },
+              "protocol_version": { "type": "string", "pattern": "^[0-9]{4}-[0-9]{2}-[0-9]{2}$" },
+              "server_version": { "type": "string", "minLength": 1 },
+              "runtime_version": { "type": "string", "minLength": 1 },
+              "observed_at_utc": { "type": "string", "format": "date-time" },
+              "evidence": { "const": "initialize_handshake_and_execution_call" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "invalidations": {
+      "type": "array",
+      "maxItems": 20,
+      "items": {
+        "type": "object",
+        "required": ["backend", "reason", "recorded_at_utc"],
+        "properties": {
+          "backend": { "enum": ["python", "accelerators", "smt_solvers", "proof_assistants", "model_checkers", "profilers"] },
+          "reason": { "type": "string", "pattern": "^[a-z][a-z0-9_]{0,31}$" },
+          "recorded_at_utc": { "type": "string", "format": "date-time" }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

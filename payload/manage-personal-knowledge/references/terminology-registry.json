@@ -1,0 +1,159 @@
+{
+  "schema_version": "skill-terminology-registry/v1",
+  "skill_id": "personal:manage-personal-knowledge",
+  "terms": [
+    {
+      "canonical_id": "knowledge_root",
+      "display_name_zh": "个人知识根",
+      "definition_ref": "references/terminology.md#knowledge_root",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_canonical_concept",
+      "constitutive_fields": [
+        "root_id",
+        "current_path",
+        "components",
+        "schema_version",
+        "state_hash"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "Vault path",
+        "home directory"
+      ],
+      "introduced_in": "v1.0.0",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial canonical definition"
+      ]
+    },
+    {
+      "canonical_id": "kb_resource_id",
+      "display_name_zh": "知识资源 ID",
+      "definition_ref": "references/terminology.md#kb_resource_id",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_canonical_concept",
+      "constitutive_fields": [
+        "resource_id",
+        "status",
+        "target",
+        "history",
+        "integrity"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "file path",
+        "wikilink"
+      ],
+      "introduced_in": "v1.0.0",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial canonical definition"
+      ]
+    },
+    {
+      "canonical_id": "question_collection",
+      "display_name_zh": "结构化题集",
+      "definition_ref": "references/terminology.md#question_collection",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_derived_collection",
+      "constitutive_fields": [
+        "collection_id",
+        "source_scope",
+        "source_relative",
+        "source_format",
+        "parser_version",
+        "verification_status",
+        "source_sha256",
+        "document_count",
+        "question_count",
+        "scan_state"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "PDF",
+        "filesystem folder",
+        "resource-registry entry",
+        "standalone SQLite index"
+      ],
+      "introduced_in": "v1.0.0",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for unified Vault and knowledge-root question retrieval"
+      ]
+    },
+    {
+      "canonical_id": "question_import_plan",
+      "display_name_zh": "题集导入计划",
+      "definition_ref": "references/terminology.md#question_import_plan",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_transaction_evidence",
+      "constitutive_fields": [
+        "schema_version",
+        "source_scope",
+        "source_relative",
+        "source_format",
+        "parser_version",
+        "source_sha256",
+        "document_count",
+        "question_count",
+        "verification_status",
+        "action",
+        "plan_sha256"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "import receipt",
+        "verification receipt",
+        "collection manifest"
+      ],
+      "introduced_in": "v1.0.0",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition as the hash-bound import preview and write gate"
+      ]
+    },
+    {
+      "canonical_id": "question_coverage",
+      "display_name_zh": "结构化题库覆盖状态",
+      "definition_ref": "references/terminology.md#question_coverage",
+      "semantic_layer": "skill_workflow",
+      "authority_class": "skill_owned_derived_audit",
+      "constitutive_fields": [
+        "knowledge_root_id",
+        "discovery_relative",
+        "registered_sources",
+        "registered_collections",
+        "discovered_unimported",
+        "scan_errors",
+        "discovery_complete",
+        "coverage_complete"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [
+        "PDF-library coverage",
+        "Vault freshness",
+        "solution correctness"
+      ],
+      "introduced_in": "v1.0.0",
+      "change_policy": "semantic_change_requires_versioned_migration",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition that keeps adapter-local completeness from being reported as whole-corpus completeness"
+      ]
+    }
+  ]
+}

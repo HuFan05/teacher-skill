@@ -1,0 +1,480 @@
+{
+  "schema_version": "skill-terminology-registry/v1",
+  "skill_id": "teacher:cs-ai-research-solve",
+  "terms": [
+    {
+      "canonical_id": "research_identity",
+      "display_name_zh": "研究身份",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "id",
+        "previous"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#research_identity",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "project_objective",
+      "display_name_zh": "项目研究目标",
+      "semantic_layer": "research_data",
+      "authority_class": "immutable_research_identity",
+      "constitutive_fields": [
+        "statement",
+        "domain",
+        "claim_scope",
+        "assumptions",
+        "evidence_standard",
+        "completion_standard"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "semantic_change_requires_new_project_or_explicit_fork",
+      "definition_ref": "references/terminology.md#project_objective",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "research_record",
+      "display_name_zh": "研究记录",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "id",
+        "kind",
+        "statement",
+        "scope",
+        "action",
+        "feedback",
+        "evidence",
+        "dependencies"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#research_record",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "record_revision",
+      "display_name_zh": "记录修订",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "id",
+        "previous"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#record_revision",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "research_asset",
+      "display_name_zh": "研究资产",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "sha256",
+        "bytes",
+        "name",
+        "role",
+        "summary",
+        "locator"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#research_asset",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "review_record",
+      "display_name_zh": "审核记录",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "target",
+        "decision",
+        "coverage",
+        "method",
+        "scope",
+        "findings",
+        "materials",
+        "report",
+        "reviewer",
+        "supersedes"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#review_record",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "evidence_status",
+      "display_name_zh": "证据状态",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "review",
+        "epistemic",
+        "effective_epistemic",
+        "effect",
+        "exportable",
+        "usable",
+        "reasons",
+        "review_ids"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#evidence_status",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "failure_memory",
+      "display_name_zh": "失败记忆",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "action",
+        "feedback",
+        "scope",
+        "limitations",
+        "reopen",
+        "evidence"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#failure_memory",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "correction_record",
+      "display_name_zh": "更正记录",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "target",
+        "effect",
+        "reason",
+        "replacement"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#correction_record",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "research_map",
+      "display_name_zh": "研究地图",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "records",
+        "reviews",
+        "selected",
+        "origins"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#research_map",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "project_snapshot",
+      "display_name_zh": "项目快照",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "project_id",
+        "objective",
+        "record_hashes",
+        "selected",
+        "reviews",
+        "foreign_reviews",
+        "origins",
+        "parent"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#project_snapshot",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "formal_library",
+      "display_name_zh": "正式研究库",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "objects",
+        "HEAD",
+        "locations"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#formal_library",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "source_reference",
+      "display_name_zh": "摘要来源引用",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "sha256",
+        "bytes",
+        "summary",
+        "locator"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#source_reference",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "exchange_bundle",
+      "display_name_zh": "已审研究交接包",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "source_snapshot",
+        "record_hashes",
+        "reviews",
+        "assets",
+        "statuses",
+        "origins",
+        "assurance"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#exchange_bundle",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "temporary_replay",
+      "display_name_zh": "临时重开复现",
+      "semantic_layer": "research_data",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "files",
+        "argv",
+        "capture",
+        "purpose"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#temporary_replay",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "continuation_check",
+      "display_name_zh": "研究接续检查",
+      "semantic_layer": "workflow_observation",
+      "authority_class": "operational_only",
+      "constitutive_fields": [
+        "snapshot",
+        "scope",
+        "record_revisions",
+        "pairs",
+        "plan_sha256",
+        "decisions_sha256"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#continuation_check",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "project_navigation",
+      "display_name_zh": "项目导航清单",
+      "semantic_layer": "derived_navigation",
+      "authority_class": "locator_only",
+      "constitutive_fields": [
+        "formal_library",
+        "snapshot",
+        "markdown",
+        "browser",
+        "roles",
+        "retained",
+        "delivery"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_navigation_update_without_research_mutation",
+      "definition_ref": "references/terminology.md#project_navigation",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "export_plan",
+      "display_name_zh": "研究导出计划",
+      "semantic_layer": "delivery_metadata",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "source_snapshot",
+        "toolset_sha256",
+        "scope",
+        "record_hashes",
+        "review_hashes",
+        "assets",
+        "contract",
+        "asset_budget",
+        "max_zip_bytes",
+        "previous_plan_sha256"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#export_plan",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    },
+    {
+      "canonical_id": "material_group",
+      "display_name_zh": "研究运行材料组",
+      "semantic_layer": "delivery_metadata",
+      "authority_class": "explicit_evidence_scoped",
+      "constitutive_fields": [
+        "id",
+        "records",
+        "files",
+        "entrypoint",
+        "argv",
+        "expected_outputs",
+        "environment",
+        "unresolved_dependencies"
+      ],
+      "aliases": [],
+      "deprecated_aliases": [],
+      "reserved_conflicts": [],
+      "change_policy": "explicit_semantic_review_and_affected_contract_migration",
+      "definition_ref": "references/terminology.md#material_group",
+      "introduced_in": "v1.0.0",
+      "visibility": "local",
+      "relations": [],
+      "history": [
+        "v1.0.0: initial definition for the CS/AI research-data contract."
+      ]
+    }
+  ]
+}

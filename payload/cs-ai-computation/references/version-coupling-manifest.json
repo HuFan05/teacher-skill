@@ -1,0 +1,323 @@
+{
+  "schema_version": "skill-version-coupling-manifest/v1",
+  "skill_name": "cs-ai-computation",
+  "current_generation": "cs-ai-computation-v1.0.0",
+  "historical_generations": [],
+  "generation_tokens": [
+    {
+      "token": "cs-ai-computation/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "skill-terminology-registry/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "skill-version-coupling-manifest/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "terminology-baseline/v1",
+      "generation": "shared"
+    },
+    {
+      "token": "timing/v1",
+      "generation": "shared"
+    }
+  ],
+  "entrypoints": [
+    {
+      "id": "entry-0",
+      "path": "SKILL.md",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "instruction",
+      "source": "current"
+    },
+    {
+      "id": "entry-1",
+      "path": "scripts/backend_inventory.py",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "entry-2",
+      "path": "scripts/backend_inventory.ps1",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "compatibility",
+      "source": "current"
+    },
+    {
+      "id": "entry-3",
+      "path": "scripts/probe_backends.py",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "entry-4",
+      "path": "scripts/probe_backends.ps1",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "compatibility",
+      "source": "current"
+    },
+    {
+      "id": "entry-5",
+      "path": "scripts/run_python_capability.py",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "entry-6",
+      "path": "scripts/computation_record.py",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "validator",
+      "source": "current"
+    },
+    {
+      "id": "entry-7",
+      "path": "scripts/check_backend_routing.py",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "validator",
+      "source": "current"
+    },
+    {
+      "id": "entry-8",
+      "path": "scripts/check_mcp_policy.py",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "validator",
+      "source": "current"
+    },
+    {
+      "id": "entry-9",
+      "path": "scripts/validate_terminology.py",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "validator",
+      "source": "current"
+    },
+    {
+      "id": "entry-10",
+      "path": "references/backend-inventory.schema.json",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "schema",
+      "source": "current"
+    },
+    {
+      "id": "entry-11",
+      "path": "scripts/backend_inventory.py",
+      "generation": "cs-ai-computation-v1.0.0",
+      "kind": "dispatcher",
+      "source": "current"
+    }
+  ],
+  "components": [
+    {
+      "path": "SKILL.md",
+      "classification": "initial",
+      "rationale": "Skill instructions, gates, and routing entrances."
+    },
+    {
+      "path": "agents/openai.yaml",
+      "classification": "initial",
+      "rationale": "Agent interface metadata and default prompt."
+    },
+    {
+      "path": "references/backend-inventory.md",
+      "classification": "initial",
+      "rationale": "Backend inventory state, authority, and refresh contract."
+    },
+    {
+      "path": "references/backend-inventory.schema.json",
+      "classification": "initial",
+      "rationale": "Persistent backend inventory schema."
+    },
+    {
+      "path": "references/backend-routing-evidence.md",
+      "classification": "initial",
+      "rationale": "Ledger of promoted benchmark evidence for routing rules."
+    },
+    {
+      "path": "references/backend-routing.md",
+      "classification": "initial",
+      "rationale": "Task-class routing catalog and verification guide."
+    },
+    {
+      "path": "references/computation-record.md",
+      "classification": "initial",
+      "rationale": "Computation and experiment record contract and evidence grades."
+    },
+    {
+      "path": "references/fastest-completion.md",
+      "classification": "initial",
+      "rationale": "User-requested fastest-completion rules."
+    },
+    {
+      "path": "references/long-running-computations.md",
+      "classification": "initial",
+      "rationale": "Tool call-window and long-run routing rules."
+    },
+    {
+      "path": "references/observer-data-dictionary.md",
+      "classification": "initial",
+      "rationale": "Observer phase and field dictionary."
+    },
+    {
+      "path": "references/observer-phases.json",
+      "classification": "initial",
+      "rationale": "Machine-readable observer phase catalog."
+    },
+    {
+      "path": "references/reproducible-computation-records.md",
+      "classification": "initial",
+      "rationale": "Computation record entrance and validator commands."
+    },
+    {
+      "path": "references/terminology-registry.json",
+      "classification": "initial",
+      "rationale": "Canonical terminology registry."
+    },
+    {
+      "path": "references/terminology.md",
+      "classification": "initial",
+      "rationale": "Normative canonical terminology."
+    },
+    {
+      "path": "references/version-coupling-manifest.json",
+      "classification": "initial",
+      "rationale": "Version coupling of Skill components."
+    },
+    {
+      "path": "scripts/__init__.py",
+      "classification": "initial",
+      "rationale": "Test-discovery package marker."
+    },
+    {
+      "path": "scripts/backend_inventory.ps1",
+      "classification": "initial",
+      "rationale": "PowerShell inventory public entry."
+    },
+    {
+      "path": "scripts/backend_inventory.py",
+      "classification": "initial",
+      "rationale": "Python inventory public entry."
+    },
+    {
+      "path": "scripts/backend_inventory_impl.ps1",
+      "classification": "initial",
+      "rationale": "PowerShell inventory implementation."
+    },
+    {
+      "path": "scripts/check_backend_routing.py",
+      "classification": "initial",
+      "rationale": "Routing catalog policy checker."
+    },
+    {
+      "path": "scripts/check_mcp_policy.py",
+      "classification": "initial",
+      "rationale": "Computation-tool policy anchor checker."
+    },
+    {
+      "path": "scripts/computation_child.py",
+      "classification": "initial",
+      "rationale": "Bounded child computation runner."
+    },
+    {
+      "path": "scripts/computation_output.ps1",
+      "classification": "initial",
+      "rationale": "PowerShell bounded output projection."
+    },
+    {
+      "path": "scripts/computation_output.py",
+      "classification": "initial",
+      "rationale": "Python bounded output transport."
+    },
+    {
+      "path": "scripts/computation_projection.py",
+      "classification": "initial",
+      "rationale": "Backend inventory projection views."
+    },
+    {
+      "path": "scripts/computation_record.py",
+      "classification": "initial",
+      "rationale": "Computation record initializer and validator."
+    },
+    {
+      "path": "scripts/observer_run.ps1",
+      "classification": "initial",
+      "rationale": "PowerShell observer wrapper."
+    },
+    {
+      "path": "scripts/observer_run.py",
+      "classification": "initial",
+      "rationale": "Python observer wrapper."
+    },
+    {
+      "path": "scripts/probe_backends.ps1",
+      "classification": "initial",
+      "rationale": "PowerShell probe public entry."
+    },
+    {
+      "path": "scripts/probe_backends.py",
+      "classification": "initial",
+      "rationale": "Python probe public entry."
+    },
+    {
+      "path": "scripts/probe_backends_impl.ps1",
+      "classification": "initial",
+      "rationale": "PowerShell probe implementation."
+    },
+    {
+      "path": "scripts/run_python_capability.py",
+      "classification": "initial",
+      "rationale": "Python capability live-check runner."
+    },
+    {
+      "path": "scripts/tests/__init__.py",
+      "classification": "initial",
+      "rationale": "Test package marker."
+    },
+    {
+      "path": "scripts/tests/test_backend_inventory.py",
+      "classification": "initial",
+      "rationale": "Inventory tests."
+    },
+    {
+      "path": "scripts/tests/test_backend_routing.py",
+      "classification": "initial",
+      "rationale": "Routing checker tests."
+    },
+    {
+      "path": "scripts/tests/test_check_mcp_policy.py",
+      "classification": "initial",
+      "rationale": "Policy checker tests."
+    },
+    {
+      "path": "scripts/tests/test_computation_record.py",
+      "classification": "initial",
+      "rationale": "Computation record tests."
+    },
+    {
+      "path": "scripts/tests/test_observer_run.py",
+      "classification": "initial",
+      "rationale": "Observer wrapper tests."
+    },
+    {
+      "path": "scripts/tests/test_probe_backends.py",
+      "classification": "initial",
+      "rationale": "Probe tests."
+    },
+    {
+      "path": "scripts/tests/test_run_python_capability.py",
+      "classification": "initial",
+      "rationale": "Capability runner tests."
+    },
+    {
+      "path": "scripts/validate_terminology.py",
+      "classification": "initial",
+      "rationale": "Terminology validator."
+    }
+  ],
+  "edges": [],
+  "changed_boundary_classes": []
+}

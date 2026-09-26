@@ -1,0 +1,301 @@
+{
+  "schema_version": 3,
+  "artifact": {
+    "name": "teacher",
+    "version": "1.0.0",
+    "type": "portable-skill-suite"
+  },
+  "payload_root": "payload/teacher",
+  "payloads": [
+    {
+      "name": "teacher",
+      "path": "payload/teacher",
+      "role": "primary"
+    },
+    {
+      "name": "cs-ai-research-solve",
+      "path": "payload/cs-ai-research-solve",
+      "role": "dependency"
+    },
+    {
+      "name": "cs-ai-computation",
+      "path": "payload/cs-ai-computation",
+      "role": "dependency"
+    },
+    {
+      "name": "pdf-paper-search",
+      "path": "payload/pdf-paper-search",
+      "role": "dependency"
+    },
+    {
+      "name": "manage-personal-knowledge",
+      "path": "payload/manage-personal-knowledge",
+      "role": "dependency"
+    },
+    {
+      "name": "obsidian-vault-notes",
+      "path": "payload/obsidian-vault-notes",
+      "role": "dependency"
+    }
+  ],
+  "dependency_graph": {
+    "teacher": [
+      "cs-ai-research-solve",
+      "manage-personal-knowledge",
+      "cs-ai-computation",
+      "pdf-paper-search",
+      "obsidian-vault-notes"
+    ],
+    "manage-personal-knowledge": [
+      "obsidian-vault-notes",
+      "pdf-paper-search"
+    ],
+    "pdf-paper-search": [
+      "obsidian-vault-notes"
+    ],
+    "cs-ai-research-solve": [
+      "cs-ai-computation",
+      "obsidian-vault-notes"
+    ],
+    "cs-ai-computation": [],
+    "obsidian-vault-notes": []
+  },
+  "targets": [
+    {
+      "os": "macos",
+      "architecture": "arm64",
+      "shell": "POSIX sh",
+      "runtime": "Python 3.10+",
+      "install_strategy": "transactional user-owned Skill root",
+      "support_status": "expected"
+    },
+    {
+      "os": "macos",
+      "architecture": "x64",
+      "shell": "POSIX sh",
+      "runtime": "Python 3.10+",
+      "install_strategy": "transactional user-owned Skill root",
+      "support_status": "expected"
+    },
+    {
+      "os": "linux",
+      "architecture": "x64 or arm64",
+      "shell": "POSIX sh",
+      "runtime": "Python 3.10+",
+      "install_strategy": "transactional user-owned Skill root",
+      "support_status": "expected"
+    },
+    {
+      "os": "windows",
+      "architecture": "x64",
+      "shell": "cmd or PowerShell",
+      "runtime": "Python 3.10+",
+      "install_strategy": "transactional user-owned Skill root",
+      "support_status": "expected"
+    }
+  ],
+  "support_status_meaning": {
+    "expected": "designed and statically checked for this platform; run tests/install_flow.py on the receiving machine to exercise the full lifecycle there"
+  },
+  "entrypoints": {
+    "human": "START_HERE.md",
+    "agent": "AGENT_INSTALL.md"
+  },
+  "agents": {
+    "codex": {
+      "option": "--agent codex",
+      "skills_root": "${CODEX_HOME:-~/.codex}/skills",
+      "default": true
+    },
+    "claude": {
+      "option": "--agent claude",
+      "skills_root": "${CLAUDE_CONFIG_DIR:-~/.claude}/skills",
+      "default": false
+    },
+    "generic": {
+      "option": "--agent generic --target-root <AGENT_SKILLS_ROOT>",
+      "skills_root": "<AGENT_SKILLS_ROOT>",
+      "requires_target_root": true,
+      "default": false
+    }
+  },
+  "installation": {
+    "engine": "install.py",
+    "windows": "INSTALL_WINDOWS.cmd",
+    "posix": "install.sh",
+    "dry_run": "python install.py --dry-run --agent generic --target-root <AGENT_SKILLS_ROOT>",
+    "codex": "python install.py --agent codex --yes",
+    "claude": "python install.py --agent claude --yes",
+    "non_interactive": "python install.py --agent generic --target-root <AGENT_SKILLS_ROOT> --yes",
+    "with_knowledge_root": "python install.py --agent generic --target-root <AGENT_SKILLS_ROOT> --knowledge-root <KNOWLEDGE_ROOT> --vault <VAULT_RELATIVE_PATH> --library <PDF_LIBRARY_RELATIVE_PATH> --yes",
+    "with_teacher_read_scope": "python install.py --agent generic --target-root <AGENT_SKILLS_ROOT> --read-root <READABLE_DIRECTORY> --network on|off --yes",
+    "setup_knowledge_root": "python install.py --setup --agent generic --target-root <AGENT_SKILLS_ROOT> --knowledge-root <KNOWLEDGE_ROOT> --vault <VAULT_RELATIVE_PATH> --library <PDF_LIBRARY_RELATIVE_PATH> --yes",
+    "setup_teacher_read_scope": "python install.py --setup --agent generic --target-root <AGENT_SKILLS_ROOT> --read-root <READABLE_DIRECTORY> --network on|off --yes",
+    "doctor": "python install.py --doctor --agent generic --target-root <AGENT_SKILLS_ROOT>",
+    "replace": "rerun the same install command with --replace after reviewing the existing targets",
+    "debug_repair": "rerun the same install arguments with --setup",
+    "uninstall": "python install.py --uninstall --agent generic --target-root <AGENT_SKILLS_ROOT> --yes",
+    "purge": "python install.py --uninstall --purge-local-state --agent generic --target-root <AGENT_SKILLS_ROOT> --yes",
+    "same_arguments_rule": "keep --agent, --target-root, --config, --knowledge-state-dir, --teacher-config-dir and --state-dir identical for every later doctor, setup, replace and uninstall command"
+  },
+  "exit_codes": {
+    "0": "success",
+    "2": "missing input, missing configuration or cancellation",
+    "10": "Python not found",
+    "11": "Python older than 3.10",
+    "21": "existing installation protected; review, then rerun with --replace",
+    "31": "unsupported platform",
+    "40": "permission, disk space or process failure",
+    "50": "checksum, setup or validation failure",
+    "51": "installed files differ from the package",
+    "52": "rollback recovery required; preserve backups and read the report"
+  },
+  "configuration": {
+    "mode": "receiver-local",
+    "knowledge_root": {
+      "required": false,
+      "owner": "manage-personal-knowledge",
+      "setup_entrypoint": "scripts/setup_local.py",
+      "used_by": [
+        "manage-personal-knowledge",
+        "obsidian-vault-notes",
+        "pdf-paper-search"
+      ],
+      "prompt_on_first_run": true,
+      "empty_answer_skips": true,
+      "required_sources": [
+        "obsidian-vault",
+        "pdf-library"
+      ],
+      "sources_must_be_non_nested": true,
+      "non_interactive_requires_exact_relative_sources": true,
+      "config_file": "<USER_CONFIG>/manage-personal-knowledge/config.json",
+      "companion_config_file": "obsidian-vault-notes.json beside config_file",
+      "state_dir": "<USER_STATE>/manage-personal-knowledge",
+      "environment_overrides": {
+        "config_file": "MPK_CONFIG_PATH",
+        "state_dir": "MPK_STATE_DIR"
+      },
+      "installer_options": {
+        "config_file": "--config",
+        "state_dir": "--knowledge-state-dir"
+      }
+    },
+    "teacher_skill": {
+      "required": false,
+      "owner": "teacher",
+      "setup_entrypoint": "scripts/teacher.py",
+      "setup_arguments": [
+        "setup"
+      ],
+      "runs_only_when_given": [
+        "--read-root",
+        "--network"
+      ],
+      "config_file": "<USER_CONFIG>/teacher/config.json",
+      "environment_overrides": {
+        "config_dir": "TEACHER_CONFIG_DIR",
+        "state_dir": "TEACHER_STATE_DIR"
+      },
+      "installer_options": {
+        "config_dir": "--teacher-config-dir"
+      }
+    },
+    "indexes": {
+      "vault": "explicit-opt-in",
+      "pdf": "explicit-opt-in",
+      "teacher": "explicit-opt-in: teacher.py index <DIR>, then --apply <PLAN_SHA256>"
+    },
+    "registry_initialization_during_setup": false
+  },
+  "update_policy": {
+    "existing_install": "stop-unless-replace",
+    "transaction": "all-payloads",
+    "backup": "outside-agent-scan-root",
+    "rollback": "restore-all-targets-and-managed-configuration"
+  },
+  "local_state": {
+    "included_in_package": false,
+    "platform_roots": {
+      "USER_CONFIG": {
+        "macos": "~/Library/Application Support",
+        "linux": "${XDG_CONFIG_HOME:-~/.config}",
+        "windows": "%APPDATA%"
+      },
+      "USER_STATE": {
+        "macos": "~/Library/Application Support",
+        "linux": "${XDG_STATE_HOME:-~/.local/state}",
+        "windows": "%LOCALAPPDATA%"
+      }
+    },
+    "installer_state": "<USER_STATE>/teacher (backups/, INSTALL_REPORT.json, configuration-state.json); --state-dir overrides",
+    "managed_configuration": [
+      "knowledge config_file",
+      "obsidian-vault-notes.json beside it",
+      "teacher config.json",
+      "configuration-state.json"
+    ],
+    "default_uninstall": "preserve",
+    "purge_requires": [
+      "--purge-local-state",
+      "--yes"
+    ],
+    "purge_removes": [
+      "knowledge configuration and knowledge state (through setup_local.py remove --purge)",
+      "teacher config.json",
+      "installer backups, INSTALL_REPORT.json and configuration-state.json"
+    ],
+    "never_purged": [
+      "teacher research store (teacher.sqlite3)",
+      "knowledge roots, Vaults, PDF libraries and research projects"
+    ]
+  },
+  "requirements": {
+    "runtime": [
+      "Python 3.10 or newer"
+    ],
+    "system": [
+      "A Skill-capable coding agent for native discovery",
+      "Optional machine-learning, GPU, solver, proof-assistant, PDF and local-index backends are diagnosed by their owning Skills"
+    ],
+    "network": "not required for installation; optional for later operation (allow-listed web reading when verifying a cited URL)",
+    "privilege": "user"
+  },
+  "permissions_requiring_consent": [
+    "network downloads",
+    "administrator or root privileges",
+    "system-wide package installation",
+    "proxy, firewall, certificate, login, startup, or security-policy changes",
+    "replacement of existing Skills",
+    "writing the teacher Skill configuration (readable directories, web reading)",
+    "indexing, hashing, or registering a real knowledge corpus",
+    "purging local configuration, indexes, reports, or backups"
+  ],
+  "validation": [
+    "python -B \"<SKILL:manage-personal-knowledge>/scripts/suite_doctor.py\"",
+    "python -B \"<SKILL:teacher>/scripts/teacher.py\" --help",
+    "python -B \"<SKILL:teacher>/scripts/teacher.py\" setup --help",
+    "python -B \"<SKILL:cs-ai-research-solve>/scripts/validate_terminology.py\" --skill-root \"<SKILL:cs-ai-research-solve>\" --json",
+    "python -B \"<SKILL:cs-ai-research-solve>/scripts/crs.py\" --help",
+    "python -B \"<SKILL:cs-ai-research-solve>/scripts/crs_project.py\" --help",
+    "python -B \"<SKILL:cs-ai-research-solve>/scripts/crs.py\" continuity-plan --help",
+    "python -B \"<SKILL:cs-ai-computation>/scripts/validate_terminology.py\" --skill-root \"<SKILL:cs-ai-computation>\" --json",
+    "python -B \"<SKILL:cs-ai-computation>/scripts/backend_inventory.py\" --help",
+    "python -B \"<SKILL:cs-ai-computation>/scripts/check_mcp_policy.py\" --skill-file \"<SKILL:cs-ai-computation>/SKILL.md\" --openai-file \"<SKILL:cs-ai-computation>/agents/openai.yaml\"",
+    "python -B \"<SKILL:pdf-paper-search>/scripts/validate_terminology.py\" --skill-root \"<SKILL:pdf-paper-search>\" --json",
+    "python -B \"<SKILL:pdf-paper-search>/scripts/paper_locate.py\" --help",
+    "python -B \"<SKILL:manage-personal-knowledge>/scripts/validate_terminology.py\" --skill-root \"<SKILL:manage-personal-knowledge>\" --json",
+    "python -B \"<SKILL:manage-personal-knowledge>/scripts/manage_kb.py\" --help",
+    "python -B \"<SKILL:obsidian-vault-notes>/scripts/validate_terminology.py\" --skill-root \"<SKILL:obsidian-vault-notes>\" --json",
+    "python -B \"<SKILL:obsidian-vault-notes>/scripts/recall_notes.py\" --help"
+  ],
+  "known_limitations": [
+    "Optional machine-learning, GPU, solver, proof-assistant, PDF-extraction, browser and indexing backends are not bundled; missing optional backends are not a failed installation.",
+    "Agent formats other than native Skill directories require a receiver-local adapter.",
+    "The teacher Skill verifies a cited excerpt only where its configuration lets it read: an excerpt outside the configured read roots, or a URL when the network policy is off, is counted as declared rather than verified.",
+    "When --config, --knowledge-state-dir or --teacher-config-dir differ from the defaults, the Skills need the matching MPK_CONFIG_PATH, MPK_STATE_DIR or TEACHER_CONFIG_DIR at run time; the install result lists them under runtime_environment.",
+    "obsidian-vault-notes reads its own default configuration when used directly; manage-personal-knowledge passes the companion obsidian-vault-notes.json explicitly.",
+    "Rollback covers caught setup and validation failures; power loss and arbitrary third-party side effects are not covered.",
+    "Installation checks do not establish that research computations or PDF extraction work on the receiving machine."
+  ]
+}

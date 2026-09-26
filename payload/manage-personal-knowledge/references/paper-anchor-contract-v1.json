@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "contract_version": "ascii-paper-anchor/v1",
+  "query_canonicalizer_version": "paper-canonical/v1",
+  "notes": "The query canonicalizer and the PDF-index formatter have distinct versions. They interoperate by preserving these required ASCII anchors.",
+  "vectors": [
+    {
+      "id": "greek-gradient-update",
+      "input": "θ ← θ − η ∇θ L(θ)",
+      "required_tokens": ["theta", "eta", "nabla"]
+    },
+    {
+      "id": "micro-sign-tex-greek",
+      "input": "η, µ and \\beta_1",
+      "required_tokens": ["eta", "mu", "beta"]
+    },
+    {
+      "id": "tex-greek-variants",
+      "input": "\\epsilon, \\varepsilon, ε, \\lambda, λ, \\alpha, α",
+      "required_tokens": ["epsilon", "lambda", "alpha"]
+    },
+    {
+      "id": "attention-formula-notation",
+      "input": "softmax(QK^T / √d_k) V",
+      "required_tokens": ["softmax", "qk", "sqrt"]
+    },
+    {
+      "id": "complexity-bound-notation",
+      "input": "Θ(n log n) vs Ω(n²)",
+      "required_tokens": ["theta", "omega", "log", "n2"]
+    },
+    {
+      "id": "diacritic-fold",
+      "input": "Nyström approximation",
+      "required_tokens": ["nystrom", "approximation"]
+    },
+    {
+      "id": "chinese-cs-ai-terms",
+      "input": "证明自注意力的时间复杂度",
+      "required_tokens": ["prove", "self", "attention", "time", "complexity"]
+    },
+    {
+      "id": "chinese-deep-learning-terms",
+      "input": "反向传播中的梯度消失",
+      "required_tokens": ["backpropagation", "vanishing", "gradient"]
+    }
+  ]
+}

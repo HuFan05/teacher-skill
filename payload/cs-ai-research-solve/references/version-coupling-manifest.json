@@ -1,0 +1,499 @@
+{
+  "schema_version": "skill-version-coupling-manifest/v1",
+  "skill_name": "cs-ai-research-solve",
+  "current_generation": "cs-ai-research-solve-v1.0.0",
+  "historical_generations": [],
+  "generation_tokens": [
+    {
+      "token": "crs-adoption-receipt/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-adoption/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-browser-check/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-content-audit/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-content-scope/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-continuity-decisions/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-continuity-plan/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-continuity-receipt/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-delivery-contract/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-delivery-plan/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-exchange-parts/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-exchange/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-finish/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-head/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-intake/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-locations/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-namespace/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-operation/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-portable-history/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-project-navigation/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-reading-contract/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-recipient-replay-start/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-recipient-replay/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-record/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-replay-job/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-replay-owner/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-replay/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-restored-delivery/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-review-batch/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-review/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-snapshot/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-source-inventory/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-upgrade-session/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-visual-review/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-web-content-complete/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-web-content/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "crs-workflow/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "cs-ai-research-solve/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "skill-terminology-registry/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "skill-version-coupling-manifest/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    },
+    {
+      "token": "timing/v1",
+      "generation": "cs-ai-research-solve-v1.0.0"
+    }
+  ],
+  "entrypoints": [
+    {
+      "id": "current-instruction",
+      "path": "SKILL.md",
+      "generation": "cs-ai-research-solve-v1.0.0",
+      "kind": "instruction",
+      "source": "current"
+    },
+    {
+      "id": "current-cli-runner",
+      "path": "scripts/crs.py",
+      "generation": "cs-ai-research-solve-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "current-cli-dispatcher",
+      "path": "scripts/crs.py",
+      "generation": "cs-ai-research-solve-v1.0.0",
+      "kind": "dispatcher",
+      "source": "current"
+    },
+    {
+      "id": "current-record-schema",
+      "path": "scripts/crs_model.py",
+      "generation": "cs-ai-research-solve-v1.0.0",
+      "kind": "schema",
+      "source": "current"
+    },
+    {
+      "id": "current-workflow-check",
+      "path": "scripts/crs_project.py",
+      "generation": "cs-ai-research-solve-v1.0.0",
+      "kind": "validator",
+      "source": "current"
+    },
+    {
+      "id": "current-reading-builder",
+      "path": "scripts/crs_web.py",
+      "generation": "cs-ai-research-solve-v1.0.0",
+      "kind": "runner",
+      "source": "current"
+    },
+    {
+      "id": "current-public-return-guard",
+      "path": "scripts/crs_output.py",
+      "generation": "cs-ai-research-solve-v1.0.0",
+      "kind": "validator",
+      "source": "current"
+    },
+    {
+      "id": "current-terminology-validation",
+      "path": "scripts/validate_terminology.py",
+      "generation": "cs-ai-research-solve-v1.0.0",
+      "kind": "validator",
+      "source": "current"
+    }
+  ],
+  "components": [
+    {
+      "path": "SKILL.md",
+      "classification": "initial",
+      "rationale": "Skill entry instructions."
+    },
+    {
+      "path": "agents/openai.yaml",
+      "classification": "initial",
+      "rationale": "Agent interface metadata."
+    },
+    {
+      "path": "assets/research-map/app.js",
+      "classification": "initial",
+      "rationale": "Browser reading-map behaviour: language, search and formula rendering."
+    },
+    {
+      "path": "assets/research-map/page.html",
+      "classification": "initial",
+      "rationale": "Browser reading-map page template."
+    },
+    {
+      "path": "assets/research-map/style.css",
+      "classification": "initial",
+      "rationale": "Browser reading-map styles."
+    },
+    {
+      "path": "references/archive-review-operations.md",
+      "classification": "initial",
+      "rationale": "Archive, intake, review and continuity operations."
+    },
+    {
+      "path": "references/continuity.md",
+      "classification": "initial",
+      "rationale": "Continuation checks and relationship decisions."
+    },
+    {
+      "path": "references/data-contract.md",
+      "classification": "initial",
+      "rationale": "Record, review, objective, exchange and storage data contract."
+    },
+    {
+      "path": "references/formula-presentation.md",
+      "classification": "initial",
+      "rationale": "Formula, code and table presentation in local maps."
+    },
+    {
+      "path": "references/observer-data-dictionary.md",
+      "classification": "initial",
+      "rationale": "Optional host observation phase dictionary."
+    },
+    {
+      "path": "references/observer-phases.json",
+      "classification": "initial",
+      "rationale": "Optional host observation phase catalog."
+    },
+    {
+      "path": "references/planned-export.md",
+      "classification": "initial",
+      "rationale": "Planned export, material contracts and recipient restoration."
+    },
+    {
+      "path": "references/project-layout.md",
+      "classification": "initial",
+      "rationale": "Project entrance, directory roles and complete upgrade."
+    },
+    {
+      "path": "references/recovery-diagnostics.md",
+      "classification": "initial",
+      "rationale": "Replay, recovery, workflow observation and platform boundary."
+    },
+    {
+      "path": "references/storage-delivery-operations.md",
+      "classification": "initial",
+      "rationale": "Storage, content scope, ranked export and delivery sufficiency."
+    },
+    {
+      "path": "references/terminology-registry.json",
+      "classification": "initial",
+      "rationale": "Machine-readable terminology registry."
+    },
+    {
+      "path": "references/terminology.md",
+      "classification": "initial",
+      "rationale": "Canonical research-data terminology."
+    },
+    {
+      "path": "references/version-coupling-manifest.json",
+      "classification": "initial",
+      "rationale": "Version coupling manifest for this release."
+    },
+    {
+      "path": "references/web-reading.md",
+      "classification": "initial",
+      "rationale": "Complete browser reading model and verification."
+    },
+    {
+      "path": "references/workflows.md",
+      "classification": "initial",
+      "rationale": "Documented CLI workflows."
+    },
+    {
+      "path": "scripts/crs.py",
+      "classification": "initial",
+      "rationale": "Public research-asset CLI and dispatcher."
+    },
+    {
+      "path": "scripts/crs_adopt.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_batch.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_browser.cjs",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_continuity.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_delivery.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_exchange.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_export_plan.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_finish.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_formula.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_home.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_locations.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_metrics.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_model.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_obsidian.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_output.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_parts.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_prediction.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_preparation.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_project.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_reads.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_recipient.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_replay.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_store.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_temp.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_unique.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_web.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_web_formula.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/crs_workflow.py",
+      "classification": "initial",
+      "rationale": "Research-data runtime module."
+    },
+    {
+      "path": "scripts/observer_run.ps1",
+      "classification": "initial",
+      "rationale": "Optional fail-open observation wrapper."
+    },
+    {
+      "path": "scripts/test_crs_formula.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests."
+    },
+    {
+      "path": "scripts/test_crs_workflow.py",
+      "classification": "initial",
+      "rationale": "Synthetic regression tests."
+    },
+    {
+      "path": "scripts/validate_terminology.py",
+      "classification": "initial",
+      "rationale": "Terminology and documented-interface validator."
+    }
+  ],
+  "edges": [],
+  "changed_boundary_classes": []
+}
